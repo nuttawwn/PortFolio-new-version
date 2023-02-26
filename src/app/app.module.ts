@@ -8,6 +8,7 @@ import { ProjectComponentComponent } from './ElementPage/project-component/proje
 import { SkillComponentComponent } from './ElementPage/skill-component/skill-component.component';
 import { ExperienceComponentComponent } from './ElementPage/experience-component/experience-component.component';
 import { ContactComponentComponent } from './ElementPage/contact-component/contact-component.component';
+import { ProjectExperiendePopUpComponent } from './ElementPage/modole/project-experiende-pop-up/project-experiende-pop-up.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ContactComponentComponent } from './ElementPage/contact-component/conta
     ProjectComponentComponent,
     SkillComponentComponent,
     ExperienceComponentComponent,
-    ContactComponentComponent
+    ContactComponentComponent,
+    ProjectExperiendePopUpComponent
   ],
   imports: [
     BrowserModule
