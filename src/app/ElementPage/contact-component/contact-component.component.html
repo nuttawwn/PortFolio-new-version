@@ -1,35 +1,35 @@
 <div class="container">
   <div class="row">
-      <div class="contact-left">
-          <h1 class="subtitle">Contact Me</h1>
-          <p><i class="fa-solid fa-paper-plane"></i>nuttawutok111@gmail.com</p>
-          <p><i class="fa-solid fa-square-phone-flip"></i>094-821-9179</p>
-          <div class="social-icons">
-              <a href="https://www.linkedin.com/in/nuttawut-wongpanich-4a3a53204/"><i
-                      class="fa-brands fa-linkedin"></i></a>
-              <a href="https://github.com/nuttawwn"><i class="fa-brands fa-github"></i></a>
-              <a href="https://instagram.com/codingwithpeter?igshid=ZDdkNTZiNTM="><i
-                      class="fa-brands fa-instagram"></i></a>
-          </div>
-          <a href="./assets/file/Resume.pdf" class="btn btn2" download>
-              <i class="fa-solid fa-file-arrow-down"></i>
-              Resume
-          </a>
+    <div class="contact-left">
+      <h1 class="subtitle">Contact Me</h1>
+      <p><i class="fa-solid fa-paper-plane"></i>nuttawutok111@gmail.com</p>
+      <p><i class="fa-solid fa-square-phone-flip"></i>094-821-9179</p>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/nuttawut-wongpanich-4a3a53204/"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/nuttawwn"><i class="fa-brands fa-github"></i></a>
+        <a href="https://instagram.com/codingwithpeter?igshid=ZDdkNTZiNTM="><i class="fa-brands fa-instagram"></i></a>
       </div>
-      <div class="contact-right">
-          <form name="submit-to-google-sheet">
-              <input type="text" name="Name" placeholder="Your name" required>
-              <input type="text" name="Email" placeholder="Your e-mail" required>
-              <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-              <button type="submit" class="btn btn2" style="font-size: 20px;">
-                  <i class="fa-solid fa-circle-check"></i>
-                  Submit
-              </button>
-          </form>
-      </div>
+      <a href="./assets/file/Resume.pdf" class="btn btn2" download>
+        <i class="fa-solid fa-file-arrow-down"></i>
+        Resume
+      </a>
+    </div>
+    <div class="contact-right">
+      <form name="submit-to-google-sheet">
+        <input type="text" name="Name" placeholder="Your name" required>
+        <input type="text" name="Email" placeholder="Your e-mail" required>
+        <textarea name="Message" rows="6" placeholder="Your Message" ></textarea>
+        <button class="btn btn2" style="font-size: 20px;" (click)="sendMail()">
+          <i class="fa-solid fa-circle-check"></i>
+          Submit
+        </button>
+      </form>
+      <!-- <form formGroup="">
+
+      </form> -->
+    </div>
   </div>
 </div>
 <div class="copy-right">
   <p>Copyright © Nuttawut Wongpanich Made with <i class="fa-solid fa-heart"></i> by CodingWithPeter 2022</p>
 </div>
-
