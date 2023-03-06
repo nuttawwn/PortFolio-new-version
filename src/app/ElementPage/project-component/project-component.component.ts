@@ -21,4 +21,7 @@ export class ProjectComponentComponent {
     // })
     helper.dialog.warning("Please enter company");
   }
+  projectModal(){
+    helper.dialog.warning("Test Show Project Detail");
+  }
 }
