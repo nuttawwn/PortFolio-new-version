@@ -143,6 +143,10 @@
     display: flex;
     justify-content: center;
   }
+  .project-item div:hover {
+    // background: #ff004f;
+    transform: translateY(0px);
+  }
 
   .project-item div {
     // background: #ffffff;
@@ -150,7 +154,7 @@
     // font-size: 13px;
     // font-weight: 300;
     border-radius: 10px;
-    transition: background 0.5s, transform 0.5s;
+    // transition: background 0.5s, transform 0.5s;
   }
 
   .project-item img{
