@@ -1,4 +1,4 @@
-import swal, { SweetAlertIcon } from "sweetalert2";
+import  swal, { SweetAlertIcon } from "sweetalert2";
 
 
 export class dialogHelper {
@@ -15,7 +15,7 @@ export class dialogHelper {
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
             confirmButtonText: 'Yes, do it!'
-        }).then((result) => {
+        }).then((result:any) => {
             if (result.value && callback) {
 
                 if (callback && callback.com) { callback.com[callback.prop](); }
@@ -32,7 +32,7 @@ export class dialogHelper {
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
             confirmButtonText: 'Yes, do it!'
-        }).then((result) => {
+        }).then((result:any) => {
             if (callback) {
                 callback();
             }
@@ -85,24 +85,24 @@ export class dialogHelper {
             else if (callback) { callback(); }
         });
     }
-    // /**
-    //  *
-    //  * @param icon : 'success' | 'error' | 'warning' | 'info' | 'question'
-    //  * @param title : string
-    //  * @param text : string?
-    //  * @param callback : function?
-    //  */
-    // show(icon: SweetAlertIcon, title: string, text?: string, callback?: any) {
-    //     swal.fire({
-    //         icon: icon,
-    //         title: title,
-    //         text: text
-    //         //footer: '<a href>Why do I have this issue?</a>'
-    //     }).then(() => {
-    //         if (callback && callback.com) { callback.com[callback.prop](); }
-    //         else if (callback) { callback(); }
-    //     });
-    // }
+    /**
+     *
+     * @param icon : 'success' | 'error' | 'warning' | 'info' | 'question'
+     * @param title : string
+     * @param text : string?
+     * @param callback : function?
+     */
+    show(icon: SweetAlertIcon, title: string, text?: string, callback?: any) {
+        swal.fire({
+            icon: icon,
+            title: title,
+            text: text
+            //footer: '<a href>Why do I have this issue?</a>'
+        }).then(() => {
+            if (callback && callback.com) { callback.com[callback.prop](); }
+            else if (callback) { callback(); }
+        });
+    }
     // info(title?, text?, callback?) {
     //     swal.fire({
     //         icon: 'info',
@@ -113,17 +113,17 @@ export class dialogHelper {
     //         else if (callback) { callback(); }
     //     })
     // }
-    // warning(title?, text?, callback?) {
-    //     swal.fire({
-    //         icon: 'warning',
-    //         title: title,
-    //         html: text,
+    warning(title?: string, text?: string, callback?: any) {
+        swal.fire({
+            icon: 'warning',
+            title: title,
+            html: text,
 
-    //     }).then(() => {
-    //         if (callback && callback.com) { callback.com[callback.prop](); }
-    //         else if (callback) { callback(); }
-    //     });
-    // }
+        }).then(() => {
+            if (callback && callback.com) { callback.com[callback.prop](); }
+            else if (callback) { callback(); }
+        });
+    }
     // requireWarning(title?, text?, callback?) {
     //     swal.fire({
     //         icon: 'error',

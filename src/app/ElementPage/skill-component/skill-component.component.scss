@@ -9,8 +9,6 @@
   background-color: #262626;
   color: #fff;
   font-weight: 300px;
-
-
 }
 .skill h1{
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -19,12 +17,10 @@
 .skill-list{
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(100px , 1fr));
-  // grid-template-columns:minmax();
   grid-gap: 40px;
   margin-top: 50px;
 }
 .skill-list-item{
-  // background-color: aliceblue;
   border-radius: 10%;
 }
 
