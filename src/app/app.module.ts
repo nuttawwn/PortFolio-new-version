@@ -9,6 +9,7 @@ import { SkillComponentComponent } from './ElementPage/skill-component/skill-com
 import { ExperienceComponentComponent } from './ElementPage/experience-component/experience-component.component';
 import { ContactComponentComponent } from './ElementPage/contact-component/contact-component.component';
 import { ProjectExperiendePopUpComponent } from './ElementPage/modole/project-experiende-pop-up/project-experiende-pop-up.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -19,10 +20,12 @@ import { ProjectExperiendePopUpComponent } from './ElementPage/modole/project-ex
     SkillComponentComponent,
     ExperienceComponentComponent,
     ContactComponentComponent,
-    ProjectExperiendePopUpComponent
+    ProjectExperiendePopUpComponent,
+
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

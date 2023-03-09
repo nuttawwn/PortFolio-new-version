@@ -1,5 +1,5 @@
 <div class="project">
-  <div class="container">
+  <div class="project-detail">
     <h1>Projects</h1>
     <!-- <div class="project-item">
       <div class="card">
@@ -12,37 +12,37 @@
     <div class="project-item">
       <div class="project-item-list">
         <div class="item-card">
-          <img src="./assets/img/TestProjectImg_1.jpg" alt="card"(click)="projectModal()">
+          <img src="./assets/img/TestProjectImg_1.jpg" alt="card" (click)="projectModal(1)">
           <h2>Project </h2>
         </div>
       </div>
       <div class="project-item-list">
         <div class="item-card">
-          <img src="./assets/img/TestProjectImg_2.jpg" alt="card">
+          <img src="./assets/img/TestProjectImg_2.jpg" alt="card" (click)="projectModal(2)">
           <h2>Project </h2>
         </div>
       </div>
       <div class="project-item-list">
         <div class="item-card">
-          <img src="./assets/img/TestProjectImg_3.jpg" alt="card">
+          <img src="./assets/img/TestProjectImg_3.jpg" alt="card" (click)="projectModal(3)">
           <h2>Project </h2>
         </div>
       </div>
       <div class="project-item-list">
         <div class="item-card">
-          <img src="./assets/img/TestProjectImg_4.jpg" alt="card">
+          <img src="./assets/img/TestProjectImg_4.jpg" alt="card" (click)="projectModal(4)">
           <h2>Project </h2>
         </div>
       </div>
       <div class="project-item-list">
         <div class="item-card">
-          <img src="./assets/img/TestProjectImg_5.jpg" alt="card">
+          <img src="./assets/img/TestProjectImg_5.jpg" alt="card" (click)="projectModal(5)">
           <h2>Project </h2>
         </div>
       </div>
       <div class="project-item-list">
         <div class="item-card">
-          <img src="./assets/img/TestProjectImg_6.jpg" alt="card">
+          <img src="./assets/img/TestProjectImg_6.jpg" alt="card" (click)="projectModal(6)">
           <h2>Project </h2>
         </div>
       </div>
@@ -55,3 +55,39 @@
     </div> -->
   </div>
 </div>
+<ng-template #ProjectModal1>
+  <app-project-experiende-pop-up
+    [ProjectItem]="'Project1'"
+    (close)="closeModal()">
+  </app-project-experiende-pop-up>
+</ng-template>
+<ng-template #ProjectModal2>
+  <app-project-experiende-pop-up
+    [ProjectItem]="'Project2'"
+    (close)="closeModal()">
+  </app-project-experiende-pop-up>
+</ng-template>
+<ng-template #ProjectModal3>
+  <app-project-experiende-pop-up
+    [ProjectItem]="'Project3'"
+    (close)="closeModal()">
+  </app-project-experiende-pop-up>
+</ng-template>
+<ng-template #ProjectModal4>
+  <app-project-experiende-pop-up
+    [ProjectItem]="'Project4'"
+    (close)="closeModal()">
+  </app-project-experiende-pop-up>
+</ng-template>
+<ng-template #ProjectModal5>
+  <app-project-experiende-pop-up
+    [ProjectItem]="'Project5'"
+    (close)="closeModal()">
+  </app-project-experiende-pop-up>
+</ng-template>
+<ng-template #ProjectModal6>
+  <app-project-experiende-pop-up
+    [ProjectItem]="'Project6'"
+    (close)="closeModal()">
+  </app-project-experiende-pop-up>
+</ng-template>
