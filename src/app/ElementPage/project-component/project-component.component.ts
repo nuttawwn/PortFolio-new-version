@@ -27,6 +27,8 @@ export class ProjectComponentComponent {
             animated: true,
             backdrop: 'static',
             class: 'modal-lg'
+            // class: 'modal-dialog-centered',
+            // initialState
           }
         )
         break;
@@ -36,6 +38,7 @@ export class ProjectComponentComponent {
             animated: true,
             backdrop: 'static',
             class: 'modal-lg'
+            // class: 'modal-dialog-centered',
           }
         )
         break;
@@ -45,6 +48,7 @@ export class ProjectComponentComponent {
             animated: true,
             backdrop: 'static',
             class: 'modal-lg'
+            // class: 'modal-dialog-centered',
           }
         )
         break;
@@ -54,6 +58,7 @@ export class ProjectComponentComponent {
             animated: true,
             backdrop: 'static',
             class: 'modal-lg'
+            // class: 'modal-dialog-centered',
           }
         )
         break;
@@ -63,6 +68,7 @@ export class ProjectComponentComponent {
             animated: true,
             backdrop: 'static',
             class: 'modal-lg'
+            // class: 'modal-dialog-centered',
           }
         )
         break;
@@ -72,6 +78,7 @@ export class ProjectComponentComponent {
             animated: true,
             backdrop: 'static',
             class: 'modal-lg'
+            // class: 'modal-dialog-centered',
           }
         )
         break;

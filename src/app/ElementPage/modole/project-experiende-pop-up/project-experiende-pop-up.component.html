@@ -1,11 +1,24 @@
-<div class="modal-header new-header-color" style="width: 100%;background: #052CA3;">
-  <h5 class="modal-title pull-left"style="color: aliceblue"><i class="fa fa-file" > </i> &nbsp;{{ header }} </h5>
+<div class="modal-header" style="width: 100%;">
+  <!-- <h5 class="modal-title" style="color:#000; margin: 0 auto;"> -->
+    <!-- <h5 class="modal-title" style="color:#000; "> -->
+    <!-- {{ header }}
+  </h5> -->
   <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="exitMiss()">
-  <span aria-hidden="true"class="visually-hidden" >&times;</span>
-</button>
+    <span aria-hidden="true"class="visually-hidden" >&times;</span>
+  </button>
 </div>
-<ng-template [ngIf]="ProjectItem" [ngOutletContext]="context"></ng-template>
-<div class="modal-body" style="width: 100%">
+<ng-template [ngIf]="ProjectItem" [ngOutletContext]="context">
 
-  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus unde consequuntur dolore, necessitatibus reprehenderit eum ad sit laudantium consequatur praesentium architecto vero soluta ex ipsam porro provident quisquam eveniet veniam.</p>
-</div>
+  <div class="modal-body" style="width: 100%">
+    <h5>
+      {{ header }}
+    </h5>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus unde consequuntur dolore, necessitatibus
+      reprehenderit eum ad sit laudantium consequatur praesentium architecto vero soluta ex ipsam porro provident
+      quisquam
+      eveniet veniam.</p>
+  </div>
+  <!-- <div class="modal-footer" style="margin: 0 auto;">
+    <button type="button" class="btn btn-secondary" style="margin: 0 auto;" data-dismiss="modal"  (click)="exitMiss()">Close</button>
+  </div> -->
+</ng-template>
