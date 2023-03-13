@@ -1,24 +1,120 @@
 <div class="modal-header" style="width: 100%;">
   <!-- <h5 class="modal-title" style="color:#000; margin: 0 auto;"> -->
-    <!-- <h5 class="modal-title" style="color:#000; "> -->
-    <!-- {{ header }}
+  <!-- <h5 class="modal-title" style="color:#000; "> -->
+  <!-- {{ header }}
   </h5> -->
   <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="exitMiss()">
-    <span aria-hidden="true"class="visually-hidden" >&times;</span>
+    <span aria-hidden="true" class="visually-hidden">&times;</span>
   </button>
 </div>
-<ng-template [ngIf]="ProjectItem" [ngOutletContext]="context">
-
+<ng-template [ngIf]="projectItem_1" [ngIfElse]="nextProject2">
   <div class="modal-body" style="width: 100%">
-    <h5>
-      {{ header }}
+    <h5 style="text-align: center;">
+      <!-- {{ ProjectHeader }} -->
     </h5>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus unde consequuntur dolore, necessitatibus
+    <carousel [isAnimated]="true">
+      <slide>
+        <img src="./assets/img/project/gameTicTacToe_1.jpg" alt="first slide"
+          style="width: 80%; display: block; margin-left: 9%; align-items:center;">
+      </slide>
+      <!-- <slide>
+        <img src="./assets/img/Project_Detail_2.jpg" alt="first slide"
+          style="width: 80%; display: block; margin-left: 9%; align-items:center;">
+      </slide> -->
+    </carousel>
+    <!-- <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus unde consequuntur dolore, necessitatibus
       reprehenderit eum ad sit laudantium consequatur praesentium architecto vero soluta ex ipsam porro provident
       quisquam
-      eveniet veniam.</p>
+      eveniet veniam.</p> -->
+    <div class="link-icons">
+      <a href="https://github.com/nuttawwn/gameTicToe"><i class="fa-brands fa-github"></i></a>
+      <a href="https://gametictoe.netlify.app/"><i class="fa-solid fa-gamepad"></i></a>
+    </div>
   </div>
-  <!-- <div class="modal-footer" style="margin: 0 auto;">
+</ng-template>
+<ng-template #nextProject2>
+  <ng-template [ngIf]="projectItem_2" [ngIfElse]="nextProject3">
+    <div class="modal-body" style="width: 100%">
+      <h5 style="text-align: center;">
+        <!-- {{ ProjectHeader }} -->
+      </h5>
+      <carousel [isAnimated]="true">
+        <slide>
+          <img src="./assets/img/project/gameMathPuzzle_1.jpg" alt="first slide"
+            style="width: 80%; display: block; margin-left: 9%; align-items:center;">
+        </slide>
+        <!-- <slide>
+          <img src="./assets/img/Project_Detail_2.jpg" alt="first slide"
+            style="width: 80%; display: block; margin-left: 9%; align-items:center;">
+        </slide> -->
+      </carousel>
+      <!-- <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus unde consequuntur dolore, necessitatibus
+        reprehenderit eum ad sit laudantium consequatur praesentium architecto vero soluta ex ipsam porro provident
+        quisquam
+        eveniet veniam.</p> -->
+      <div class="link-icons">
+        <a href="https://github.com/nuttawwn/gamemath"><i class="fa-brands fa-github"></i></a>
+        <a href="https://gamemathpuzzle.netlify.app/"><i class="fa-solid fa-gamepad"></i></a>
+      </div>
+    </div>
+  </ng-template>
+</ng-template>
+<ng-template #nextProject3>
+  <ng-template [ngIf]="projectItem_3" [ngIfElse]="nextProject4">
+    <div class="modal-body" style="width: 100%">
+      <h5 style="text-align: center;">
+        {{ ProjectHeader }}
+      </h5>
+      <p>Project 22222</p>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus unde consequuntur dolore, necessitatibus
+        reprehenderit eum ad sit laudantium consequatur praesentium architecto vero soluta ex ipsam porro provident
+        quisquam
+        eveniet veniam.</p>
+    </div>
+  </ng-template>
+</ng-template>
+<ng-template #nextProject4>
+  <ng-template [ngIf]="projectItem_4" [ngIfElse]="nextProject5">
+    <div class="modal-body" style="width: 100%">
+      <h5 style="text-align: center;">
+        {{ ProjectHeader }}
+      </h5>
+      <p>Project 22222</p>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus unde consequuntur dolore, necessitatibus
+        reprehenderit eum ad sit laudantium consequatur praesentium architecto vero soluta ex ipsam porro provident
+        quisquam
+        eveniet veniam.</p>
+    </div>
+  </ng-template>
+</ng-template>
+<ng-template #nextProject5>
+  <ng-template [ngIf]="projectItem_5" [ngIfElse]="nextProject6">
+    <div class="modal-body" style="width: 100%">
+      <h5 style="text-align: center;">
+        {{ ProjectHeader }}
+      </h5>
+      <p>Project 22222</p>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus unde consequuntur dolore, necessitatibus
+        reprehenderit eum ad sit laudantium consequatur praesentium architecto vero soluta ex ipsam porro provident
+        quisquam
+        eveniet veniam.</p>
+    </div>
+  </ng-template>
+</ng-template>
+<ng-template #nextProject6>
+  <ng-template [ngIf]="projectItem_6">
+    <div class="modal-body" style="width: 100%">
+      <h5 style="text-align: center;">
+        {{ ProjectHeader }}
+      </h5>
+      <p>Project 22222</p>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus unde consequuntur dolore, necessitatibus
+        reprehenderit eum ad sit laudantium consequatur praesentium architecto vero soluta ex ipsam porro provident
+        quisquam
+        eveniet veniam.</p>
+    </div>
+  </ng-template>
+</ng-template>
+<!-- <div class="modal-footer" style="margin: 0 auto;">
     <button type="button" class="btn btn-secondary" style="margin: 0 auto;" data-dismiss="modal"  (click)="exitMiss()">Close</button>
   </div> -->
-</ng-template>

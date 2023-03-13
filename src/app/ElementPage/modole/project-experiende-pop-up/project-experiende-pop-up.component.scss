@@ -1,3 +1,19 @@
 .h5{
   color: black;
 }
+
+.link-icons a {
+  text-decoration: none;
+  font-size: 30px;
+  margin-right: 15px;
+  margin-top: 30px;
+  color: #ababab;
+  display: inline-block;
+}
+.link-icons a:hover {
+  color: #ff004f;
+  transition: translateY(-5px);
+}
+.link-icons {
+  text-align: center;
+}

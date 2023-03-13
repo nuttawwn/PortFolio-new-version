@@ -90,6 +90,7 @@
   font-family: 'TH SarabunPSK';
   font-weight: bold;
   color: #262626;
+  padding-top: 10%;
 }
 // // @media only screen and (max-width : 900px) {
 // //   .project-item {
@@ -188,7 +189,8 @@
     background: #ffffff;
   }
   .item-card h2 {
-    font-size: 20px;
+    padding-top: 5%;
+    font-size: 30px;
     color: #262626;
   }
   .project-item img {
@@ -214,7 +216,8 @@
     background: #ffffff;
   }
   .item-card h2 {
-    font-size: 30px;
+    padding-top: 5%;
+    font-size: 60px;
     color: #262626;
   }
   .project-item img {
@@ -243,7 +246,8 @@
     background: #ffffff;
   }
   .item-card h2 {
-    font-size: 30px;
+    padding-top: 5%;
+    font-size: 60px;
     color: #262626;
   }
   .project-item img {
@@ -274,7 +278,8 @@
     background: #ffffff;
   }
   .item-card h2 {
-    font-size: 30px;
+    padding-top: 5%;
+    font-size: 60px;
     color: #262626;
   }
   .project-item img {
@@ -304,7 +309,8 @@
     background: #ffffff;
   }
   .item-card h2 {
-    font-size: 30px;
+    padding-top: 5%;
+    font-size: 60px;
     color: #262626;
   }
   .project-item img {
@@ -334,7 +340,8 @@
     background: #ffffff;
   }
   .item-card h2 {
-    font-size: 30px;
+    padding-top: 5%;
+    font-size: 100px;
     color: #262626;
   }
   .project-item img {
@@ -344,10 +351,10 @@
     // margin: 0 0 0 10px;
   }
 }
-@media only screen   and (min-width : 3200px) {
+@media only screen  and (max-width : 4700px) and (min-width : 3200px) {
   .project-item {
      display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto;
      grid-gap: 60px;
     margin-top: 50px;
     // display: flex;
@@ -364,14 +371,45 @@
     background: #ffffff;
   }
   .item-card h2 {
-    font-size: 30px;
+    padding-top: 5%;
+    font-size: 100px;
     color: #262626;
   }
   .project-item img {
-    width: 900px;
-    height: 900px;
+    width: 1500px;
+    height: 1500px;
     align-items: center;
     // margin: 0 0 0 10px;
   }
 }
+@media only screen   and (min-width : 4700px) {
+  .project-item {
+     display: grid;
+    grid-template-columns: auto auto ;
+     grid-gap: 60px;
+    margin-top: 50px;
+    // display: flex;
+    justify-content: space-between;
+  }
 
+  .item-card {
+    box-shadow:
+      inset // 0 -3em 3em rgba(0, 0, 0, 0.1),
+      0 0 0 2px rgb(190, 190, 190);
+    // 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+    // height: 250px;
+    width: min-content;
+    background: #ffffff;
+  }
+  .item-card h2 {
+    padding-top: 5%;
+    font-size: 100px;
+    color: #262626;
+  }
+  .project-item img {
+    width: 1500px;
+    height: 1500px;
+    align-items: center;
+    // margin: 0 0 0 10px;
+  }
+}
