@@ -85,6 +85,7 @@ form .btn2 {
 .copy-right i {
   color: #ff004f;
 }
+
 .btn.btn2 {
   display: inline-block;
   background-color: #ff004f;
@@ -103,6 +104,9 @@ form .btn2 {
       background-color: #ff004f;
       width: 100%;
     }
+  }
+  copy-right p {
+    padding-left: 30px;
   }
 }
 // @media only screen and (max-width : 400px){
