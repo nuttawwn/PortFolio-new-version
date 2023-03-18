@@ -10,6 +10,7 @@ import { ExperienceComponentComponent } from './ElementPage/experience-component
 import { ContactComponentComponent } from './ElementPage/contact-component/contact-component.component';
 import { ProjectExperiendePopUpComponent } from './ElementPage/modole/project-experiende-pop-up/project-experiende-pop-up.component';
 import { SharedModule } from './shared/shared.module';
+import { NgxTypedJsModule } from 'ngx-typed-js';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { SharedModule } from './shared/shared.module';
   ],
   imports: [
     BrowserModule,
-    SharedModule
+    SharedModule,
+    NgxTypedJsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
