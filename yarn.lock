@@ -1865,6 +1865,13 @@ ajv@^6.12.5:
     json-schema-traverse "^0.4.1"
     uri-js "^4.2.2"
 
+angular-mgl-timeline@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/angular-mgl-timeline/-/angular-mgl-timeline-1.1.0.tgz#9296ad8e36d3503387b2bf1369bc4c40bb668a7b"
+  integrity sha512-4X0bPHccY+vtbrMkGnTWtmdBt9J93M5ysFS7Kn1Cy/AyaBuXWuWRyKLgp0W1SaAHrr7RkFknp9zEpNFUVk1HrA==
+  dependencies:
+    tslib "^2.3.0"
+
 ansi-colors@4.1.3:
   version "4.1.3"
   resolved "https://registry.yarnpkg.com/ansi-colors/-/ansi-colors-4.1.3.tgz#37611340eb2243e70cc604cad35d63270d48781b"
