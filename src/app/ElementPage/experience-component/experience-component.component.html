@@ -2,4 +2,65 @@
   <div class="container">
     <h1>EXPERIENCE</h1>
   </div>
+  <mgl-timeline [toggle]="toggle" [alternate]="alternate" [side]="side">
+    <mgl-timeline-entry>
+      <mgl-timeline-entry-header style="background-color: coral;">
+        <label class="label-header">
+          Full-stack Developer
+        </label>
+      </mgl-timeline-entry-header>
+      <mgl-timeline-entry-content>
+        <!-- <lable>Skill : SQL Azure · GitHub · Git · docker · RxJS · Hangfire · SCSS · Angular · TypeScript · JavaScript · HTML · Cascading Style Sheets (CSS) · C# · .NET Framework · SQL</lable> -->
+        <lable>Skill</lable>
+        <li><mat-chip>SQL Azure</mat-chip></li>
+        <li><mat-chip>GitHub</mat-chip></li>
+        <li><mat-chip>Git</mat-chip></li>
+        <li><mat-chip>docker</mat-chip></li>
+        <li><mat-chip>RxJS</mat-chip></li>
+        <li><mat-chip>Hangfire</mat-chip></li>
+        <li><mat-chip>Angular</mat-chip></li>
+        <li><mat-chip>TypeScript</mat-chip></li>
+        <li><mat-chip>JavaScript</mat-chip></li>
+        <li><mat-chip>HTML</mat-chip></li>
+        <li><mat-chip>CSS</mat-chip></li>
+        <li><mat-chip>C#</mat-chip></li>
+        <li><mat-chip>NET Framework</mat-chip></li>
+      </mgl-timeline-entry-content>
+      <mgl-timeline-entry-side class="label-entry-side">
+        Jul 2021 - Present
+      </mgl-timeline-entry-side>
+    </mgl-timeline-entry>
+    <mgl-timeline-entry>
+      <mgl-timeline-entry-header style="background-color: coral;">
+        <label class="label-header">
+          Data Reporting Analyst
+        </label>
+      </mgl-timeline-entry-header>
+      <mgl-timeline-entry-content>
+        <lable>Skill : <mat-chip>SQL </mat-chip> <mat-chip> PostgreSQL</mat-chip></lable>
+      </mgl-timeline-entry-content>
+      <mgl-timeline-entry-side class="label-entry-side">
+        Jan 2021 - Apr 2021
+      </mgl-timeline-entry-side>
+    </mgl-timeline-entry>
+    <mgl-timeline-entry>
+      <mgl-timeline-entry-header (click)="onHeaderClick($event)" style="background-color: coral;">
+        <label class="label-header">
+          call center Fibre technical
+        </label>
+      </mgl-timeline-entry-header>
+      <mgl-timeline-entry-content [expandAnimationTiming]="contentAnimation ? '200ms ease' : '0ms'"
+        [collapseAnimationTiming]="contentAnimation ? '100ms ease' : '0ms'">
+        <lable>Skill : <mat-chip>Customer Service</mat-chip> · <mat-chip>Technical Support</mat-chip> · <mat-chip>Wireless Networking ·</mat-chip> <mat-chip>network</mat-chip></lable>
+      </mgl-timeline-entry-content>
+      <!-- <mgl-timeline-entry-dot [class]="color ? 'primary' : 'accent'" [size]="size" (click)="onDotClick($event)"
+        [expandAnimationTiming]="dotAnimation ? '200ms ease' : '0ms'"
+        [collapseAnimationTiming]="dotAnimation ? '100ms ease' : '0ms'"></mgl-timeline-entry-dot> -->
+      <mgl-timeline-entry-dot>
+      </mgl-timeline-entry-dot>
+      <mgl-timeline-entry-side class="label-entry-side">
+        Aug 2018 - May 2020
+      </mgl-timeline-entry-side>
+    </mgl-timeline-entry>
+  </mgl-timeline>
 </div>

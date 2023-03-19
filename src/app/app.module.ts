@@ -11,6 +11,9 @@ import { ContactComponentComponent } from './ElementPage/contact-component/conta
 import { ProjectExperiendePopUpComponent } from './ElementPage/modole/project-experiende-pop-up/project-experiende-pop-up.component';
 import { SharedModule } from './shared/shared.module';
 import { NgxTypedJsModule } from 'ngx-typed-js';
+import { MglTimelineModule } from 'angular-mgl-timeline';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -27,7 +30,10 @@ import { NgxTypedJsModule } from 'ngx-typed-js';
   imports: [
     BrowserModule,
     SharedModule,
-    NgxTypedJsModule
+    NgxTypedJsModule,
+    MglTimelineModule,
+    BrowserAnimationsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent],
