@@ -1,3 +1,4 @@
+<ngx-spinner type="ball-scale-multiple"></ngx-spinner>
 <div class="contact">
   <div class="row">
     <div class="contact-left">
@@ -15,37 +16,13 @@
       </a>
     </div>
     <div class="contact-right">
-      <!-- <form name="submit-to-google-sheet">
-        <input type="text" name="Name" placeholder="Your name" required>
-        <input type="text" name="Email" placeholder="Your e-mail" required>
-        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-        <button class="btn btn2" style="font-size: 20px;" (click)="sendMail()">
-          <i class="fa-solid fa-circle-check"></i>
-          Submit
-        </button>
-      </form> -->
-      <!-- <form formGroup="">
-      </form> -->
-      <!-- <form [formGroup]="contactFrom" (ngSubmit)="sendMail()">
-        <input type="text" id="email" name="Email" placeholder="Your e-mail" formControlName="Email" required>
-        <input type="text" id="name" name="Name" placeholder="Your name" formControlName="Name" required>
-      </form> -->
-      <input type="text" name="Name" placeholder="Your name" required [(ngModel)]="contactModel.Name">
-      <input type="text" name="Email" placeholder="Your e-mail" required [(ngModel)]="contactModel.Email">
-      <textarea name="Message" rows="6" placeholder="Your Message" [(ngModel)]="contactModel.Message"></textarea>
+      <input type="text" name="Name" placeholder="Your name" required [(ngModel)]="contactModel.Name"(keydown.enter)="sendMail()">
+      <input type="text" name="Email" placeholder="Your e-mail" required [(ngModel)]="contactModel.Email"(keydown.enter)="sendMail()">
+      <textarea name="Message" rows="6" placeholder="Your Message" [(ngModel)]="contactModel.Message"(keydown.enter)="sendMail()"></textarea>
       <button class="btn btn2" style="font-size: 20px;" (click)="sendMail()">
         <i class="fa-solid fa-circle-check"></i>
         Submit
       </button>
-      <!-- <form [formGroup]="contactFrom" (ngSubmit)="sendMail()">
-        <input type="text" id="name" name="Name" placeholder="Your name" formControlName="Name" required>
-        <input type="text" id="email" name="Email" placeholder="Your e-mail" formControlName="Email" required>
-        <textarea name="Message" rows="6" placeholder="Your Message" formControlName="Message"></textarea>
-        <button class="btn btn2" style="font-size: 20px;">
-          <i class="fa-solid fa-circle-check"></i>
-          Submit
-        </button>
-      </form> -->
     </div>
   </div>
 </div>

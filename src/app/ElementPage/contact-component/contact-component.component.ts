@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms'
+import { NgxSpinnerService } from 'ngx-spinner';
 import { helper } from 'src/app/Helper/helper';
 import { GoogleSheetService } from 'src/app/service/google-sheet.service';
 import { contactModel } from '../modole/model/contact.model';
@@ -14,7 +15,8 @@ export class ContactComponentComponent implements OnInit {
   constructor
     (
       private formBuilder: FormBuilder,
-      private sheetService: GoogleSheetService
+      private sheetService: GoogleSheetService,
+      private spinner: NgxSpinnerService
     ) {
     this.contactFrom = this.formBuilder.group({
       Name: [this.contactModel.Name, [Validators.required]],
@@ -37,9 +39,14 @@ export class ContactComponentComponent implements OnInit {
     let Checkbox = false
     let dis = this.checkValue(name, email, message)
     if (dis == true) {
+      this.spinner.show();
       this.sheetService.updateSheet(name, email, message, Checkbox).subscribe((res) => {
         helper.dialog.successWithButton("Send Data Complete Please wait for call back ", () => {
-          location.reload();
+          setTimeout(() => {
+            /** spinner ends after 5 seconds */
+            this.spinner.hide();
+            location.reload();
+          }, 500);
         })
       })
     }
