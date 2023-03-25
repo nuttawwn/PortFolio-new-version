@@ -13,6 +13,9 @@ import { SharedModule } from './shared/shared.module';
 import { NgxTypedJsModule } from 'ngx-typed-js';
 import { MglTimelineModule } from 'angular-mgl-timeline';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -33,6 +36,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NgxTypedJsModule,
     MglTimelineModule,
     BrowserAnimationsModule,
+    NgbModule,
+    FormsModule,
+    HttpClientModule,
+
 
   ],
   providers: [],

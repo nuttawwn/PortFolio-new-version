@@ -1,17 +1,26 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms'
 import { helper } from 'src/app/Helper/helper';
+import { GoogleSheetService } from 'src/app/service/google-sheet.service';
+import { contactModel } from '../modole/model/contact.model';
 @Component({
   selector: 'app-contact-component',
   templateUrl: './contact-component.component.html',
   styleUrls: ['./contact-component.component.scss']
 })
 export class ContactComponentComponent implements OnInit {
-  // contactFrom : FormGroup;
+  public contactFrom: FormGroup;
+  public contactModel = new contactModel()
   constructor
     (
       private formBuilder: FormBuilder,
+      private sheetService: GoogleSheetService
     ) {
+    this.contactFrom = this.formBuilder.group({
+      Name: [this.contactModel.Name, [Validators.required]],
+      Email: [this.contactModel.Email, [Validators.required]],
+      Message: [this.contactModel.Message, [Validators.required]],
+    });
   }
   // public scriptURL = 'https://script.google.com/macros/s/AKfycby0YyyhAiG3ndiQLbv9AtZWvAUG5WAX9i83RLWvMVpY2eoA8UFYvSswyYpd-fHfpUfU/exec'
   // public form = document.getElementById('submit-to-google-sheet');
@@ -21,26 +30,31 @@ export class ContactComponentComponent implements OnInit {
   }
   public sendMail() {
     console.log("test ");
-    helper.dialog.successWithButton("Send E-mail Successful");
-    //   this.form.addEventListener('submit', e => {
-    //     e.preventDefault()
-    //     fetch(this.scriptURL, { method: 'POST', body: new FormData(this.form) })
-    //         .then(response => {
-    //             Swal.fire({
-    //                 position: 'center',
-    //                 icon: 'success',
-    //                 title: 'Send Data Succesfully',
-    //                 showConfirmButton: false,
-    //                 timer: 1500
-    //             },
-    //                 setTimeout(()=> {
-    //                     // this.msg.innerHTML = " ";
-    //                 }, 0)
-    //             )
-    //             form.reset()
-    //             // msg.innerHTML = "Message sen successfully"
-    //         })
-    //         .catch(error => console.error('Error!', error.message))
-    // })
+    console.log("contactmodel", this.contactModel);
+    let name = this.contactModel.Name
+    let email = this.contactModel.Email
+    let message = this.contactModel.Message
+    let Checkbox = false
+    let dis = this.checkValue(name, email, message)
+    if (dis == true) {
+      this.sheetService.updateSheet(name, email, message, Checkbox).subscribe((res) => {
+        helper.dialog.successWithButton("Send Data Complete Please wait for call back ", () => {
+          location.reload();
+        })
+      })
+    }
+    else {
+      helper.dialog.error("The contact's information not complete")
+    }
+  }
+  private checkValue(name: string, email: string, message: string) {
+    let check: boolean = true
+    console.log("name = ", name);
+    console.log("email = ", email);
+    console.log("message = ", message);
+    message == null || message === "" ? check = false : check = true
+    name == null || message === "" ? check = false : check = true
+    email == null || message === "" ? check = false : check = true
+    return check;
   }
 }
