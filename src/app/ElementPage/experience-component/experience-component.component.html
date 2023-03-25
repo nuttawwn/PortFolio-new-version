@@ -11,6 +11,11 @@
           </label>
         </mgl-timeline-entry-header>
         <mgl-timeline-entry-content>
+          <div *ngIf="disPreriodTime">
+            <label>Period Time :
+              <mat-chip>Jul 2021 - Present</mat-chip>
+            </label>
+          </div>
           <!-- <lable>Skill : SQL Azure · GitHub · Git · docker · RxJS · Hangfire · SCSS · Angular · TypeScript · JavaScript · HTML · Cascading Style Sheets (CSS) · C# · .NET Framework · SQL</lable> -->
           <lable>Skill</lable>
           <li><mat-chip>SQL Azure</mat-chip></li>
@@ -38,6 +43,11 @@
           </label>
         </mgl-timeline-entry-header>
         <mgl-timeline-entry-content>
+          <div *ngIf="disPreriodTime">
+            <label>Period Time :
+              <mat-chip>Jan 2021 - Apr 2021</mat-chip>
+            </label>
+          </div>
           <lable>Skill : <mat-chip>SQL </mat-chip> <mat-chip> PostgreSQL</mat-chip></lable>
         </mgl-timeline-entry-content>
         <mgl-timeline-entry-side class="label-entry-side">
@@ -52,8 +62,14 @@
         </mgl-timeline-entry-header>
         <mgl-timeline-entry-content [expandAnimationTiming]="contentAnimation ? '200ms ease' : '0ms'"
           [collapseAnimationTiming]="contentAnimation ? '100ms ease' : '0ms'">
+          <div *ngIf="disPreriodTime">
+            <label>Period Time :
+              <mat-chip>Aug 2018 - May 2020</mat-chip>
+            </label>
+          </div>
           <lable>Skill : <mat-chip>Customer Service</mat-chip> · <mat-chip>Technical Support</mat-chip> ·
-            <mat-chip>Wireless Networking ·</mat-chip> <mat-chip>network</mat-chip></lable>
+            <mat-chip>Wireless Networking ·</mat-chip> <mat-chip>network</mat-chip>
+          </lable>
         </mgl-timeline-entry-content>
         <!-- <mgl-timeline-entry-dot [class]="color ? 'primary' : 'accent'" [size]="size" (click)="onDotClick($event)"
         [expandAnimationTiming]="dotAnimation ? '200ms ease' : '0ms'"
