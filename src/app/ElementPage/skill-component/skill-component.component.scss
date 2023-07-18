@@ -17,6 +17,7 @@
 
 .skill-list{
   display: grid;
+  flex-wrap: wrap;
   grid-template-columns: repeat(auto-fit,minmax(100px , 1fr));
   grid-gap: 40px;
   margin-top: 50px;
